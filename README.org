@@ -1,0 +1,46 @@
+#+TITLE:  Coduino
+#+AUTHOR: Tim Dysinger <tim@dysinger.ne>
+
+* Setup
+  
+*** Haskell
+    
+    Requires: GHC (I'm using 7.6) & cabal-install
+    
+    #+BEGIN_SRC sh
+      cabal update
+      cabal install cabal-meta cabal-src cabal-dev
+      cabal-meta --dev install
+    #+END_SRC
+    
+*** Ino (for Arduino communication)
+
+    Requires: Python (I'm using 2.7), VirtualEnv & PIP
+    
+    #+BEGIN_SRC sh
+      virtualenv `pwd`
+      source ./bin/activate
+      pip install ino
+    #+END_SRC
+    
+* Compile
+  
+*** Haskell
+    
+    #+BEGIN_SRC sh
+      ./cabal-dev/bin/copilot
+    #+END_SRC
+    
+*** Ino
+    
+    #+BEGIN_SRC sh
+      ino build -m mega
+    #+END_SRC
+    
+* Deploy
+  
+*** Ino
+    
+    #+BEGIN_SRC sh
+      ino upload -m mega
+    #+END_SRC

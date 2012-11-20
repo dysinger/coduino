@@ -1,0 +1,12 @@
+*.c
+*.h
+*.o
+.Python
+.build
+.shelly*
+bin
+cabal-dev
+dist
+include
+lib
+vendor
