@@ -23,24 +23,66 @@
       pip install ino
     #+END_SRC
     
-* Compile
-  
-*** Haskell
+* Atom
+
+*** Compile
     
+***** Haskell
+      
+      #+BEGIN_SRC sh
+        cd src
+        ../cabal-dev/bin/atom
+        cd ..
+      #+END_SRC
+      
+***** Ino
+      
+      #+BEGIN_SRC sh
+        ino build -m mega
+      #+END_SRC
+      
+*** Deploy
+    
+***** Ino
+      
+      #+BEGIN_SRC sh
+        ino upload -m atmega328
+      #+END_SRC
+
+*** Cleanup
+
     #+BEGIN_SRC sh
-      ./cabal-dev/bin/copilot
+      rm src/blink.{h,c}
+      ino clean
     #+END_SRC
+
+* Copilot
+
+*** Compile
     
-*** Ino
+***** Haskell
+      
+      #+BEGIN_SRC sh
+        ./cabal-dev/bin/copilot
+      #+END_SRC
+      
+***** Ino
+      
+      #+BEGIN_SRC sh
+        ino build -m mega
+      #+END_SRC
+      
+*** Deploy
     
-    #+BEGIN_SRC sh
-      ino build -m mega
-    #+END_SRC
-    
-* Deploy
-  
-*** Ino
-    
-    #+BEGIN_SRC sh
-      ino upload -m mega
-    #+END_SRC
+***** Ino
+      
+      #+BEGIN_SRC sh
+        ino upload -m atmega328
+      #+END_SRC
+
+***** Cleanup
+
+      #+BEGIN_SRC sh
+        rm *codegen
+        ino clean
+      #+END_SRC
