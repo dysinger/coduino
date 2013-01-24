@@ -1,6 +1,7 @@
 *.c
 *.h
 *.o
+*codegen
 .Python
 .build
 .shelly*
