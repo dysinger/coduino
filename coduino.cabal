@@ -8,14 +8,14 @@ maintainer:             Tim Dysinger <tim@dysinger.net>
 author:                 Tim Dysinger <tim@dysinger.net>
 category:               Embedded
 build-type:             Simple
-cabal-version:          >=1.16
+cabal-version:          >=1.14
 
 executable              atom
   default-language:     Haskell2010
   ghc-options:          -Wall
   hs-source-dirs:       src
   main-is:              atom.hs
-  build-depends:        base   >= 4.6
+  build-depends:        base   >= 4.5
                       , atom   >= 1.0.11
 
 executable              copilot
@@ -23,7 +23,7 @@ executable              copilot
   ghc-options:          -Wall
   hs-source-dirs:       src
   main-is:              copilot.hs
-  build-depends:        base              >=4.6
+  build-depends:        base              >=4.5
                       , copilot           >=2.1.0
                       , copilot-core      >=0.2.4
                       , copilot-language  >=0.9.1
